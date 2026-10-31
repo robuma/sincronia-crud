@@ -41,9 +41,9 @@
 
 **Interfaces:** public.clientes en los dos proyectos nuevos; mismos nombres, restricciones y permisos de demo.
 
-- [ ] Verificar que los nuevos proyectos estén vacíos y aplicar el mismo SQL.
-- [ ] Generar tipos y configurar claves publicables por ambiente sin imprimirlas.
-- [ ] Verificar conectividad de las dos BD y documentar sus identificadores.
+- [x] Verificar que los nuevos proyectos estén vacíos y aplicar el mismo SQL.
+- [x] Generar tipos y configurar claves publicables por ambiente sin imprimirlas.
+- [x] Verificar conectividad de las dos BD y documentar sus identificadores.
 
 ### Task 3: Entrega colaborativa
 
@@ -51,7 +51,7 @@
 
 **Interfaces:** main recibe PR de features; production recibe pases; CI produce un check requerido de compilación y calidad.
 
-- [ ] Documentar arranque, diseño, historias y revisión cruzada.
-- [ ] Crear y configurar solo el nuevo proyecto Vercel sin tocar los anteriores.
+- [x] Documentar arranque, diseño, historias y revisión cruzada.
+- [x] Crear y configurar solo el nuevo proyecto Vercel sin tocar los anteriores.
 - [ ] Publicar rama, crear PR y comprobar CI y despliegues.
 - [ ] Solicitar revisión independiente de la base y corregir hallazgos relevantes.

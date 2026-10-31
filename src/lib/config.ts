@@ -11,6 +11,14 @@ export interface SupabaseConfig {
   publishableKey: string
 }
 
+/** Detiene la compilación antes de que Vite incorpore una configuración incorrecta. */
+export function validateBuildConfig(input: Record<string, string | undefined>): void {
+  const settings = ['VITE_APP_ENV', 'VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY']
+  if (settings.some((key) => input[key] !== undefined)) {
+    readSupabaseConfig(input)
+  }
+}
+
 export function readSupabaseConfig(input: Record<string, string | undefined>): SupabaseConfig {
   const environment = input.VITE_APP_ENV
   if (environment !== 'development' && environment !== 'production') {

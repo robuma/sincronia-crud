@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { readSupabaseConfig } from '../src/lib/config.ts'
+import { readSupabaseConfig, validateBuildConfig } from '../src/lib/config.ts'
 
 const development = {
   VITE_APP_ENV: 'development',
@@ -43,4 +43,24 @@ test('accepts production only with its own database project', () => {
   })
   assert.equal(config.environment, 'production')
   assert.equal(config.url, 'https://qcbxeirbogtwoaunzbsf.supabase.co')
+})
+
+test('allows building the informational homepage without any Supabase configuration', () => {
+  assert.doesNotThrow(() => validateBuildConfig({}))
+})
+
+test('stops the build before a secret key can enter a browser bundle', () => {
+  assert.throws(() => validateBuildConfig({ ...development,
+    VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_secret_fake_build_test',
+  }), /clave publicable/)
+})
+
+test('stops the build when development points at production', () => {
+  assert.throws(() => validateBuildConfig({ ...development,
+    VITE_SUPABASE_URL: 'https://qcbxeirbogtwoaunzbsf.supabase.co',
+  }), /proyecto de Supabase no corresponde/)
+})
+
+test('requires complete configuration if any Supabase setting is provided', () => {
+  assert.throws(() => validateBuildConfig({ VITE_APP_ENV: 'development' }), /\.env\.local/)
 })
