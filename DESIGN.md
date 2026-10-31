@@ -36,7 +36,7 @@ La fuente ejecutable es `src/tokens.css`; las reglas compartidas están en `src/
 - Reutilizar `.button`, `.button--primary`, `.button--secondary` y `.button--danger`.
 - Reutilizar `.form-field`, `.field-error` y `.data-table`. Si hace falta un componente compartido, crearlo en `src/components/` y documentarlo aquí.
 - Cada operación real debe contemplar carga, error, vacío, éxito y doble envío. No implementar estados de éxito sin confirmación de Supabase.
-- Eliminar siempre solicita confirmación y permite cancelar.
+- Eliminar siempre solicita confirmación en un diálogo modal integrado, con opciones visibles para confirmar o cancelar.
 - Un botón de operación disponible actúa; un módulo en preparación se presenta como contenido informativo.
 
 ## Idioma y accesibilidad
