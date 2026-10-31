@@ -1,5 +1,8 @@
+import { useState } from 'react'
+
 import { Arrow } from './components/Arrow'
 import { Brand } from './components/Brand'
+import { ListarClientes } from './features/clientes/consultar/ListarClientes'
 
 const modules = [
   { title: 'Crear', detail: 'El inicio de una nueva relación.', icon: 'plus' },
@@ -19,6 +22,8 @@ function ModuleIcon({ type }: { type: typeof modules[number]['icon'] }) {
 }
 
 function App() {
+  const [view, setView] = useState<'home' | 'consultar'>('home')
+
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,50 +31,75 @@ function App() {
         <header className="site-header">
           <Brand />
           <nav aria-label="Navegación principal">
-            <a className="nav-link" href="#sistema">El sistema <Arrow diagonal /></a>
+            <button type="button" className="nav-link nav-link--button" onClick={() => setView('home')}>
+              El sistema <Arrow diagonal />
+            </button>
           </nav>
         </header>
 
         <main id="contenido">
-          <section className="hero" aria-labelledby="hero-title">
-            <div className="hero__copy">
-              <h1 id="hero-title">Buenas relaciones.<br /><span>Todo en sintonía.</span></h1>
-              <p className="hero__description">Un espacio para organizar tus clientes y cuidar lo que hace única cada relación.</p>
-              <a className="button button--primary" href="#sistema">Conocé Sincronía <Arrow /></a>
-              <p className="launch-note"><span className="status-dot" />Estamos preparando tu próximo espacio de trabajo.</p>
-            </div>
+          {view === 'consultar' ? (
+            <section className="feature-page" aria-labelledby="consultar-title">
+              <div className="feature-page__header">
+                <div>
+                  <p className="eyebrow">Clientes</p>
+                  <h1 id="consultar-title">Consultar</h1>
+                </div>
+                <button type="button" className="button button--secondary" onClick={() => setView('home')}>
+                  Volver al sistema
+                </button>
+              </div>
+              <ListarClientes />
+            </section>
+          ) : (
+            <>
+              <section className="hero" aria-labelledby="hero-title">
+                <div className="hero__copy">
+                  <h1 id="hero-title">Buenas relaciones.<br /><span>Todo en sintonía.</span></h1>
+                  <p className="hero__description">Un espacio para organizar tus clientes y cuidar lo que hace única cada relación.</p>
+                  <a className="button button--primary" href="#sistema">Conocé Sincronía <Arrow /></a>
+                  <p className="launch-note"><span className="status-dot" />Estamos preparando tu próximo espacio de trabajo.</p>
+                </div>
 
-            <div className="hero__visual" aria-hidden="true">
-              <div className="visual-orbit visual-orbit--outer" />
-              <div className="visual-orbit visual-orbit--inner" />
-              <svg className="connection-lines" viewBox="0 0 480 440" fill="none">
-                <path d="M106 126h68c36 0 32 94 66 94s36 92 72 92h60M116 314h58c36 0 32-94 66-94s36-94 72-94h62" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              <div className="visual-core"><svg viewBox="0 0 120 120" fill="none"><path d="M80 30H50a23 23 0 0 0 0 46h20" stroke="currentColor" strokeWidth="13" strokeLinecap="round" /><path d="M40 90h30a23 23 0 0 0 0-46H50" stroke="currentColor" strokeWidth="13" strokeLinecap="round" /></svg></div>
-              <div className="visual-node visual-node--one"><ModuleIcon type="plus" /></div>
-              <div className="visual-node visual-node--two"><ModuleIcon type="search" /></div>
-              <div className="visual-node visual-node--three"><ModuleIcon type="edit" /></div>
-              <div className="visual-node visual-node--four"><ModuleIcon type="remove" /></div>
-              <span className="visual-caption">Cada conexión cuenta.</span>
-            </div>
-          </section>
+                <div className="hero__visual" aria-hidden="true">
+                  <div className="visual-orbit visual-orbit--outer" />
+                  <div className="visual-orbit visual-orbit--inner" />
+                  <svg className="connection-lines" viewBox="0 0 480 440" fill="none">
+                    <path d="M106 126h68c36 0 32 94 66 94s36 92 72 92h60M116 314h58c36 0 32-94 66-94s36-94 72-94h62" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+                  <div className="visual-core"><svg viewBox="0 0 120 120" fill="none"><path d="M80 30H50a23 23 0 0 0 0 46h20" stroke="currentColor" strokeWidth="13" strokeLinecap="round" /><path d="M40 90h30a23 23 0 0 0 0-46H50" stroke="currentColor" strokeWidth="13" strokeLinecap="round" /></svg></div>
+                  <div className="visual-node visual-node--one"><ModuleIcon type="plus" /></div>
+                  <div className="visual-node visual-node--two"><ModuleIcon type="search" /></div>
+                  <div className="visual-node visual-node--three"><ModuleIcon type="edit" /></div>
+                  <div className="visual-node visual-node--four"><ModuleIcon type="remove" /></div>
+                  <span className="visual-caption">Cada conexión cuenta.</span>
+                </div>
+              </section>
 
-          <section id="sistema" className="system-section" aria-labelledby="system-title">
-            <div className="section-heading">
-              <div><h2 id="system-title">Lo esencial, en un solo lugar.</h2><p>Estamos dando forma a una gestión de clientes más simple.</p></div>
-              <span className="status-label">En preparación</span>
-            </div>
-            <ul className="module-list">
-              {modules.map((module) => (
-                <li className="module" key={module.title}>
-                  <span className="module__icon"><ModuleIcon type={module.icon} /></span>
-                  <h3>{module.title}</h3>
-                  <p>{module.detail}</p>
-                  <span className="module__availability">Próximamente</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+              <section id="sistema" className="system-section" aria-labelledby="system-title">
+                <div className="section-heading">
+                  <div><h2 id="system-title">Lo esencial, en un solo lugar.</h2><p>Estamos dando forma a una gestión de clientes más simple.</p></div>
+                  <span className="status-label">En preparación</span>
+                </div>
+                <ul className="module-list">
+                  {modules.map((module) => (
+                    <li className="module" key={module.title}>
+                      <span className="module__icon"><ModuleIcon type={module.icon} /></span>
+                      <h3>{module.title}</h3>
+                      <p>{module.detail}</p>
+                      {module.title === 'Consultar' ? (
+                        <button type="button" className="module__action" onClick={() => setView('consultar')}>
+                          Ver clientes
+                        </button>
+                      ) : (
+                        <span className="module__availability">Próximamente</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </>
+          )}
         </main>
 
         <footer className="site-footer">
