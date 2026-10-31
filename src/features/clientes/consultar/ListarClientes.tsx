@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 import { getSupabase } from '../../../lib/supabase'
 import type { Cliente } from '../types'
-import { paginateClientes } from './paginarClientes'
+import { hasSupabaseConfig, paginateClientes } from './paginarClientes'
 
 const PAGE_SIZE = 10
 
@@ -11,18 +11,13 @@ export function ListarClientes() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [page, setPage] = useState(1)
+  const [refreshCount, setRefreshCount] = useState(0)
 
   useEffect(() => {
     let isMounted = true
 
     async function fetchClientes() {
-      const hasEnvironment = Boolean(
-        import.meta.env.VITE_APP_ENV &&
-          import.meta.env.VITE_SUPABASE_URL &&
-          import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-      )
-
-      if (!hasEnvironment) {
+      if (!hasSupabaseConfig(import.meta.env)) {
         if (isMounted) {
           setClientes([])
           setError('Falta la configuración de Supabase en .env.local para consultar clientes.')
@@ -32,6 +27,9 @@ export function ListarClientes() {
       }
 
       try {
+        setLoading(true)
+        setError(null)
+
         const supabase = getSupabase()
         const { data, error: queryError } = await supabase
           .from('clientes')
@@ -64,10 +62,14 @@ export function ListarClientes() {
     return () => {
       isMounted = false
     }
-  }, [])
+  }, [refreshCount])
 
   const pagination = useMemo(() => paginateClientes(clientes, PAGE_SIZE, page), [clientes, page])
   const currentPage = pagination.page
+
+  const refreshList = () => {
+    setRefreshCount((current) => current + 1)
+  }
 
   if (loading) {
     return (
@@ -77,6 +79,9 @@ export function ListarClientes() {
             <p className="eyebrow">Clientes</p>
             <h2>Listado</h2>
           </div>
+          <button type="button" className="button button--secondary" onClick={refreshList} disabled={loading}>
+            Actualizar
+          </button>
         </header>
         <p className="status-message">Cargando clientes…</p>
       </section>
@@ -91,6 +96,9 @@ export function ListarClientes() {
             <p className="eyebrow">Clientes</p>
             <h2>Listado</h2>
           </div>
+          <button type="button" className="button button--secondary" onClick={refreshList}>
+            Reintentar
+          </button>
         </header>
         <p className="status-message status-message--error">{error}</p>
       </section>
@@ -105,6 +113,9 @@ export function ListarClientes() {
             <p className="eyebrow">Clientes</p>
             <h2>Listado</h2>
           </div>
+          <button type="button" className="button button--secondary" onClick={refreshList}>
+            Actualizar
+          </button>
         </header>
         <div className="empty-state">
           <p>No hay clientes registrados todavía.</p>
@@ -123,7 +134,12 @@ export function ListarClientes() {
           <p className="eyebrow">Clientes</p>
           <h2 id="clientes-listado-titulo">Listado</h2>
         </div>
-        <span className="status-label">{clientes.length} registros</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <span className="status-label">{clientes.length} registros</span>
+          <button type="button" className="button button--secondary" onClick={refreshList}>
+            Actualizar
+          </button>
+        </div>
       </header>
 
       <div className="table-wrap">

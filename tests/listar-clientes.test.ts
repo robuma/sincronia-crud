@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 
-import { paginateClientes } from '../src/features/clientes/consultar/paginarClientes.ts'
+import { hasSupabaseConfig, paginateClientes } from '../src/features/clientes/consultar/paginarClientes.ts'
 
 test('paginación calcula la página correcta para más de 10 clientes', () => {
   const clientes = Array.from({ length: 25 }, (_, index) => ({
@@ -33,4 +33,25 @@ test('paginación devuelve la primera página con menos de 10 clientes', () => {
   assert.equal(resultado.totalPages, 1)
   assert.equal(resultado.page, 1)
   assert.equal(resultado.items.length, 7)
+})
+
+test('detecta la configuración completa de Supabase para recargar la lista', () => {
+  assert.equal(
+    hasSupabaseConfig({
+      VITE_APP_ENV: 'development',
+      VITE_SUPABASE_URL: 'https://example.supabase.co',
+      VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_test_key',
+    }),
+    true,
+  )
+})
+
+test('rechaza una configuración incompleta para evitar recargas sin entorno válido', () => {
+  assert.equal(
+    hasSupabaseConfig({
+      VITE_APP_ENV: 'development',
+      VITE_SUPABASE_URL: 'https://example.supabase.co',
+    }),
+    false,
+  )
 })

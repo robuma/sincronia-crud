@@ -1,3 +1,11 @@
+export function hasSupabaseConfig(env: Record<string, string | undefined>): boolean {
+  return Boolean(
+    env.VITE_APP_ENV &&
+      env.VITE_SUPABASE_URL &&
+      env.VITE_SUPABASE_PUBLISHABLE_KEY,
+  )
+}
+
 export function paginateClientes<T>(items: T[], pageSize: number, page: number) {
   const safePageSize = Math.max(1, pageSize)
   const totalItems = items.length
