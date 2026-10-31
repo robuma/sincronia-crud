@@ -53,5 +53,9 @@
 
 - [x] Documentar arranque, diseño, historias y revisión cruzada.
 - [x] Crear y configurar solo el nuevo proyecto Vercel sin tocar los anteriores.
-- [ ] Publicar rama, crear PR y comprobar CI y despliegues.
-- [ ] Solicitar revisión independiente de la base y corregir hallazgos relevantes.
+- [x] Publicar rama, crear PR y comprobar CI y despliegues.
+- [x] Solicitar revisión independiente de la base y corregir hallazgos relevantes.
+
+## Entrega
+
+PR #2 pendiente de aprobación de otro integrante. Portada inicial publicada en sincronia-crud.vercel.app y Preview de la rama de preparación verificado. CI en Node 24 y 10 pruebas aprobadas. Se corrigió el hallazgo de validación previa al build y la revisión independiente no dejó hallazgos pendientes. No se integró el PR ni se eludieron protecciones; las ramas de features deben partir del main una vez aprobada esta preparación.

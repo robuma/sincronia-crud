@@ -2,6 +2,8 @@
 
 Proyecto académico PF-3872 de la Universidad de Costa Rica. Esta base incluye una portada adaptable, React + Vite + TypeScript, acceso compartido a Supabase y comprobaciones automáticas. Las cuatro operaciones CRUD se desarrollan en las historias del equipo.
 
+[Portada publicada](https://sincronia-crud.vercel.app) · [Preview de la base](https://sincronia-crud-git-setup-base-proyecto-robumas-projects.vercel.app) · [PR de preparación](https://github.com/robuma/sincronia-crud/pull/2)
+
 **Demo pública sin login: usar exclusivamente datos ficticios.** Cualquier visitante puede consultar y modificar los registros.
 
 ## Empezar
