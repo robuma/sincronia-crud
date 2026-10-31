@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Arrow } from './components/Arrow'
 import { Brand } from './components/Brand'
 import { ListarClientes } from './features/clientes/consultar/ListarClientes'
+import { EliminarClientes } from './features/clientes/eliminar/EliminarClientes'
 
 const modules = [
   { title: 'Crear', detail: 'El inicio de una nueva relación.', icon: 'plus' },
@@ -22,7 +23,7 @@ function ModuleIcon({ type }: { type: typeof modules[number]['icon'] }) {
 }
 
 function App() {
-  const [view, setView] = useState<'home' | 'consultar'>('home')
+  const [view, setView] = useState<'home' | 'consultar' | 'eliminar'>('home')
 
   return (
     <>
@@ -50,6 +51,19 @@ function App() {
                 </button>
               </div>
               <ListarClientes />
+            </section>
+          ) : view === 'eliminar' ? (
+            <section className="feature-page" aria-labelledby="eliminar-title">
+              <div className="feature-page__header">
+                <div>
+                  <p className="eyebrow">Clientes</p>
+                  <h1 id="eliminar-title">Eliminar clientes</h1>
+                </div>
+                <button type="button" className="button button--secondary" onClick={() => setView('home')}>
+                  Volver al sistema
+                </button>
+              </div>
+              <EliminarClientes />
             </section>
           ) : (
             <>
@@ -90,6 +104,10 @@ function App() {
                       {module.title === 'Consultar' ? (
                         <button type="button" className="module__action" onClick={() => setView('consultar')}>
                           Ver clientes
+                        </button>
+                      ) : module.title === 'Eliminar' ? (
+                        <button type="button" className="module__action" onClick={() => setView('eliminar')}>
+                          Eliminar clientes
                         </button>
                       ) : (
                         <span className="module__availability">Próximamente</span>
