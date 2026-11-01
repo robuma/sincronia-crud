@@ -13,7 +13,7 @@
 .crear-cliente__estado { color: var(--color-muted); }
 .crear-cliente__error { color: var(--color-danger); }
 .crear-cliente__estado:empty, .crear-cliente__error:empty { margin: 0; }
-.crear-cliente__confirmacion { padding: var(--space-4); margin-bottom: var(--space-6); border-left: 3px solid var(--color-accent); background: var(--color-surface); overflow-wrap: anywhere; }
+.crear-cliente__confirmacion { padding: var(--space-4); margin-bottom: var(--space-6); background: var(--color-surface); overflow-wrap: anywhere; }
 .crear-cliente__confirmacion p { line-height: 1.7; margin: 0 0 var(--space-3); }
 .feature-page--crear .feature-page__header { flex-wrap: wrap; }
 .feature-page--crear .feature-page__header .button { font-size: .875rem; }

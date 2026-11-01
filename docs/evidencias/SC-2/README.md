@@ -20,6 +20,8 @@ Historia: [SC-2](https://codefive.atlassian.net/browse/SC-2). Rama: `feature/SC-
 
 Los dos registros de esta comprobación se eliminaron al finalizar mediante filtros específicos de sus identificadores o correos y datos ficticios. La BD confirmó la eliminación de ambos; no se modificó el contenido de otros participantes.
 
+Ajuste visual posterior: se retiró el borde lateral de la confirmación para conservar la superficie sobria del diseño compartido. Se verificó el estado en 1440 y 390 px y se actualizó su captura; el registro ficticio adicional usado para mostrarlo también fue eliminado. No se añadieron excepciones al detector de diseño.
+
 ## Reproducir
 
 1. `npm ci`, copiar `.env.example` a `.env.local` si hace falta y ejecutar `npm run dev`.
