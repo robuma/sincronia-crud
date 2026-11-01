@@ -1,0 +1,22 @@
+.crear-cliente { max-width: 42rem; }
+.crear-cliente__intro p { color: var(--color-muted); line-height: 1.7; margin: var(--space-2) 0; }
+.crear-cliente__intro .crear-cliente__nota { margin: var(--space-4) 0 var(--space-6); font-size: .875rem; }
+.crear-cliente__campos { min-width: 0; border: 0; padding: 0; margin: 0; }
+.crear-cliente__legend { padding: 0; font-size: .875rem; color: var(--color-muted); }
+.crear-cliente .form-field { margin-block: var(--space-6); }
+.crear-cliente .form-field label, .crear-cliente .field-error, .crear-cliente .button { font-size: .875rem; }
+.crear-cliente input { width: 100%; min-width: 0; font-size: 1rem; }
+.crear-cliente input[aria-invalid="true"] { border-color: var(--color-danger); }
+.crear-cliente .field-error { line-height: 1.6; }
+.crear-cliente__guardar { margin-top: var(--space-2); }
+.crear-cliente__estado, .crear-cliente__error { font-size: .875rem; line-height: 1.7; margin: var(--space-4) 0 0; }
+.crear-cliente__estado { color: var(--color-muted); }
+.crear-cliente__error { color: var(--color-danger); }
+.crear-cliente__estado:empty, .crear-cliente__error:empty { margin: 0; }
+.crear-cliente__confirmacion { padding: var(--space-4); margin-bottom: var(--space-6); border-left: 3px solid var(--color-accent); background: var(--color-surface); overflow-wrap: anywhere; }
+.crear-cliente__confirmacion p { line-height: 1.7; margin: 0 0 var(--space-3); }
+.feature-page--crear .feature-page__header { flex-wrap: wrap; }
+.feature-page--crear .feature-page__header .button { font-size: .875rem; }
+@media (max-width: 680px) {
+  .crear-cliente__guardar { width: 100%; }
+}

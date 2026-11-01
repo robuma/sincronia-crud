@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Arrow } from './components/Arrow'
 import { Brand } from './components/Brand'
 import { ListarClientes } from './features/clientes/consultar/ListarClientes'
 import { EliminarClientes } from './features/clientes/eliminar/EliminarClientes'
+import { CrearCliente } from './features/clientes/crear/CrearCliente'
 
 const modules = [
   { title: 'Crear', detail: 'El inicio de una nueva relación.', icon: 'plus' },
@@ -23,7 +24,12 @@ function ModuleIcon({ type }: { type: typeof modules[number]['icon'] }) {
 }
 
 function App() {
-  const [view, setView] = useState<'home' | 'consultar' | 'eliminar'>('home')
+  const [view, setView] = useState<'home' | 'consultar' | 'eliminar' | 'crear'>('home')
+  const crearTitle = useRef<HTMLHeadingElement>(null)
+
+  useEffect(() => {
+    if (view === 'crear') crearTitle.current?.focus()
+  }, [view])
 
   return (
     <>
@@ -39,7 +45,20 @@ function App() {
         </header>
 
         <main id="contenido">
-          {view === 'consultar' ? (
+          {view === 'crear' ? (
+            <section className="feature-page feature-page--crear" aria-labelledby="crear-title">
+              <div className="feature-page__header">
+                <div>
+                  <p className="eyebrow">Clientes</p>
+                  <h1 id="crear-title" ref={crearTitle} tabIndex={-1}>Crear cliente</h1>
+                </div>
+                <button type="button" className="button button--secondary" onClick={() => setView('home')}>
+                  Volver al sistema
+                </button>
+              </div>
+              <CrearCliente onVerClientes={() => setView('consultar')} />
+            </section>
+          ) : view === 'consultar' ? (
             <section className="feature-page" aria-labelledby="consultar-title">
               <div className="feature-page__header">
                 <div>
@@ -101,7 +120,11 @@ function App() {
                       <span className="module__icon"><ModuleIcon type={module.icon} /></span>
                       <h3>{module.title}</h3>
                       <p>{module.detail}</p>
-                      {module.title === 'Consultar' ? (
+                      {module.title === 'Crear' ? (
+                        <button type="button" className="module__action" onClick={() => setView('crear')}>
+                          Crear cliente
+                        </button>
+                      ) : module.title === 'Consultar' ? (
                         <button type="button" className="module__action" onClick={() => setView('consultar')}>
                           Ver clientes
                         </button>
