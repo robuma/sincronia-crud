@@ -2,6 +2,8 @@
 
 Historia: [SC-2](https://codefive.atlassian.net/browse/SC-2). Rama: `feature/SC-2-crear-cliente`.
 
+[PR #5](https://github.com/robuma/sincronia-crud/pull/5). Revisión independiente del código realizada sin hallazgos; la aprobación de un compañero y el merge siguen pendientes.
+
 ## Validación realizada
 
 - `npm run check`: revisión estática, tipos, compilación y 24 pruebas aprobadas; 8 nuevas cubren las reglas de creación.

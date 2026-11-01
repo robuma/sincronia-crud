@@ -31,4 +31,4 @@
 - [x] Añadir formulario accesible y entrada desde App, usando insert/select/single y bloqueo del envío. Documentar la historia.
 - [x] Verificar en navegador errores, éxito, duplicado, listado, teclado, móvil y red lenta/fallida; limpiar solo los datos ficticios de esta prueba.
 - [x] Ejecutar npm run check y revisar el diff con un revisor independiente.
-- [ ] Registrar evidencia, commit SC-2, push de la rama y PR hacia main. Conservar Jira En progreso hasta la revisión e integración.
+- [x] Registrar evidencia, commit SC-2, push de la rama y [PR #5 hacia main](https://github.com/robuma/sincronia-crud/pull/5). Jira permanece En progreso hasta la revisión e integración.
