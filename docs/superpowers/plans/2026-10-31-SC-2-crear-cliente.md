@@ -26,9 +26,9 @@
 **Files:** crear/validarCliente.ts, crear/CrearCliente.tsx, crear/crear-cliente.css, crear/README.md, tests/crear-cliente.test.ts, src/App.tsx.
 **Interfaces:** `prepararCliente(DatosCliente)` devuelve datos normalizados y errores por campo. `errorAlCrearCliente(unknown)` devuelve mensaje seguro y campo opcional. `CrearCliente({ onVerClientes })` presenta el formulario y confirma la inserción.
 
-- [ ] Escribir pruebas de entradas vacías, formato de correo, límites, normalización, exclusión de id y clasificación de errores. Ejecutar y observar fallos antes de implementar.
-- [ ] Implementar los helpers y ejecutar las pruebas.
-- [ ] Añadir formulario accesible y entrada desde App, usando insert/select/single y bloqueo del envío. Documentar la historia.
-- [ ] Verificar en navegador errores, éxito, duplicado, listado, teclado, móvil y red lenta/fallida; limpiar solo los datos ficticios de esta prueba.
-- [ ] Ejecutar npm run check y revisar el diff con un revisor independiente.
+- [x] Escribir pruebas de entradas vacías, formato de correo, límites, normalización, exclusión de id y clasificación de errores. Ejecutar y observar fallos antes de implementar.
+- [x] Implementar los helpers y ejecutar las pruebas.
+- [x] Añadir formulario accesible y entrada desde App, usando insert/select/single y bloqueo del envío. Documentar la historia.
+- [x] Verificar en navegador errores, éxito, duplicado, listado, teclado, móvil y red lenta/fallida; limpiar solo los datos ficticios de esta prueba.
+- [x] Ejecutar npm run check y revisar el diff con un revisor independiente.
 - [ ] Registrar evidencia, commit SC-2, push de la rama y PR hacia main. Conservar Jira En progreso hasta la revisión e integración.
