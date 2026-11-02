@@ -11,7 +11,9 @@
 - Creación y eliminación reales en **sincronia-dev**, utilizando únicamente `SC9 Cliente ficticio` / `sc9.qa.20261101@example.com`. Se confirmó la creación, se buscó el registro, se canceló la eliminación con Escape y luego se eliminó. El registro de prueba quedó retirado y el listado volvió a los cuatro registros previos.
 - Teclado: navegación, submenú, apertura de acciones con Enter, foco inicial en Cancelar, Escape devuelve el foco al botón de acciones y la eliminación confirmada lo devuelve al buscador. El menú móvil cierra con Escape y devuelve el foco a su control.
 - Respuestas simuladas de listado vacío, error 503 al leer y error 500 al eliminar. Los errores ofrecen recuperación y no muestran éxito falso. La simulación se limitó al navegador de pruebas; no se cambió la BD.
+- `npm run check:db`: conexión y lectura pública de desarrollo correctas, sin mutaciones.
 - Detector de Impeccable sobre los archivos de interfaz modificados: sin hallazgos deterministas; no se añadieron exclusiones.
+- [Revisión visual independiente](revision.md): correcciones resueltas y limitación del comparador documentada, conservando la paleta aprobada.
 
 ## Cómo revisarlo
 
@@ -23,7 +25,7 @@
 
 ## Evidencia visual
 
-Las capturas de escritorio del directorio usan ocho registros ficticios simulados exclusivamente para revisar el diseño; no son datos precargados de Supabase. Las capturas móviles de búsqueda y confirmación corresponden al registro ficticio temporal indicado arriba. La portada muestra siempre su ejemplo rotulado.
+Las capturas del directorio usan ocho registros ficticios simulados exclusivamente para revisar el diseño; no son datos precargados de Supabase. La captura móvil de búsqueda muestra el filtro sobre esa colección; la confirmación corresponde al registro ficticio temporal indicado arriba. La portada muestra siempre su ejemplo rotulado.
 
 | Vista | Escritorio | Móvil |
 | --- | --- | --- |

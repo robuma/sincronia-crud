@@ -9,7 +9,7 @@ Arquitectura: conservar React, Manrope, getSupabase y el modelo Cliente. Separar
 - [x] Implementar portada, shell con navegación por hash y submenú, tabla y confirmación reutilizada. Mantener Editar marcado como próximo. Conservar las validaciones de crear.
 - [x] Aplicar diseño aprobado: tipografía 400, espacios amplios, dos columnas de funcionalidades, paleta existente, menú móvil y tabla adaptable.
 - [x] Ejecutar npm run check y comprobar teclado, móvil, navegación, búsqueda, errores y crear/eliminar un registro ficticio propio en desarrollo. Eliminar el dato de prueba.
-- [ ] Adjuntar evidencia, revisión independiente, actualizar DESIGN.md/PRODUCT.md/README.md, abrir PR SC-9 hacia main y dejar Jira En progreso hasta revisión y merge.
+- [x] Adjuntar evidencia, revisión independiente, actualizar DESIGN.md/PRODUCT.md/README.md, abrir PR SC-9 hacia main y dejar Jira En progreso hasta revisión y merge. PR #6; limitación formal del comparador registrada en docs/evidencias/SC-9/revision.md.
 
 ## Review Focus
 
