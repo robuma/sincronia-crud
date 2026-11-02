@@ -1,14 +1,16 @@
 # Sincronía · Gestión de clientes
 
-Proyecto académico PF-3872 de la Universidad de Costa Rica. Esta base incluye una portada adaptable, React + Vite + TypeScript, acceso compartido a Supabase y comprobaciones automáticas. Las cuatro operaciones CRUD se desarrollan en las historias del equipo.
+Proyecto académico PF-3872 de la Universidad de Costa Rica. Incluye una portada informativa y un directorio de clientes con React + Vite + TypeScript, Supabase y comprobaciones automáticas. Están integrados crear, consultar y eliminar; editar corresponde a SC-4 y se identifica como próximo.
 
-[Portada publicada](https://sincronia-crud.vercel.app) · [Preview de la base](https://sincronia-crud-git-setup-base-proyecto-robumas-projects.vercel.app) · [PR de preparación](https://github.com/robuma/sincronia-crud/pull/2)
+[Producción](https://sincronia-crud.vercel.app) · [Pruebas de main](https://sincronia-crud-test.vercel.app) · [Tarea de rediseño](https://codefive.atlassian.net/browse/SC-9)
+
+El sitio de pruebas general muestra lo integrado en main. Cada PR tiene su propio Preview; los cambios de una rama todavía en revisión se ven allí. Producción recibe únicamente los pases aprobados hacia production.
 
 **Demo pública sin login: usar exclusivamente datos ficticios.** Cualquier visitante puede consultar y modificar los registros.
 
 ## Empezar
 
-Instalar Node 24 (ver `.nvmrc`) y Git. Después de integrar el PR de preparación en main:
+Instalar Node 24 (ver `.nvmrc`) y Git:
 
 ```bash
 git clone https://github.com/robuma/sincronia-crud.git
@@ -18,9 +20,9 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Abrir la dirección que indique Vite. `.env.example` contiene la URL y la clave **publicable** de desarrollo; no hace falta compartir contraseñas de Supabase. La portada funciona sin variables, pero las futuras operaciones necesitan esta configuración.
+Abrir la dirección que indique Vite. `.env.example` contiene la URL y la clave **publicable** de desarrollo; no hace falta compartir contraseñas de Supabase. La portada funciona sin variables; las operaciones del directorio necesitan esta configuración.
 
-Mientras el PR de preparación siga pendiente, se puede revisar con `git switch setup/base-proyecto`. Esperar su aprobación e integración antes de crear los features desde main.
+La portada está en `/`; **Ingresar** abre `/#clientes` y **Nuevo cliente**, `/#clientes/nuevo`. Se pueden abrir y recargar estos enlaces directamente.
 
 ## Equipo e historias
 
@@ -32,6 +34,8 @@ Mientras el PR de preparación siga pendiente, se puede revisar con `git switch 
 | Darío Zamora | [SC-5 Eliminar cliente](https://codefive.atlassian.net/browse/SC-5) | `feature/SC-5-eliminar-cliente` | `src/features/clientes/eliminar/` |
 
 Cada persona implementa su historia, prueba y abre un PR hacia main para revisión de otro integrante. Jira conserva una historia principal por persona, sin subtareas. Incluir la clave SC en rama, commits y PR para vincular el desarrollo.
+
+[SC-9](https://codefive.atlassian.net/browse/SC-9), asignada a Roberto, integra el rediseño de portada y directorio y la búsqueda por nombre, correo o teléfono. Su rama es `feature/SC-9-redisenar-interfaz`; conserva las operaciones de las historias anteriores.
 
 ```bash
 git switch main
@@ -67,12 +71,16 @@ src/
   types/database.ts       Tipos generados desde el esquema
   tokens.css              Variables de diseño
   styles.css              Patrones y estilos compartidos
-tests/                    Pruebas de configuración
+tests/                    Configuración, validación, búsqueda y paginación
 database/migrations/      SQL fuente versionado
 .github/workflows/ci.yml   Calidad, compilación y pruebas
 ```
 
-Usar `getSupabase()` y los tipos `Cliente` / `DatosCliente`. La tabla `clientes` tiene `id`, `nombre`, `correo` y `telefono`; la BD genera el identificador. Aún no hay formularios, listado, edición ni eliminación implementados.
+Usar `getSupabase()` y los tipos `Cliente` / `DatosCliente`. La tabla `clientes` tiene `id`, `nombre`, `correo` y `telefono`; la BD genera el identificador.
+
+La búsqueda empieza con tres caracteres, ignora mayúsculas y tildes, admite teléfonos sin separadores y se aplica antes de paginar. El directorio obtiene todos los registros de la demo en lotes de hasta 500 para no truncarlos al límite de la API. Esta estrategia mantiene sencilla la demostración; para volúmenes grandes se debe trasladar búsqueda y paginación al servidor.
+
+`ListarClientes` integra consulta y acciones; `ConfirmarEliminarCliente` conserva la operación de SC-5. `EliminarClientes` mantiene una exportación compatible. La portada muestra tres ejemplos ficticios identificados; el directorio usa los datos de Supabase. [Evidencia y pruebas de SC-9](docs/evidencias/SC-9/README.md).
 
 ## Comprobaciones
 
