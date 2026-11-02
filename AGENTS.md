@@ -15,6 +15,8 @@ Leer `README.md`, `PRODUCT.md`, `DESIGN.md`, `docs/ambientes.md` y la historia d
 
 Implementar solo la historia asignada. No completar las historias de otras personas ni atribuirles commits hechos por el agente. Conservar Jira con una historia principal por participante, sin agregar subtareas. El equipo debe comprender y explicar los cambios.
 
+SC-9 es la tarea transversal de rediseño y búsqueda asignada a Roberto. Su rama `feature/SC-9-redisenar-interfaz` integra la presentación de crear, consultar y eliminar; no implementa SC-4. Al añadir edición, reutilizar el directorio, `AccionesCliente`, el shell y los patrones de DESIGN.md, sin crear un segundo listado o una nueva identidad.
+
 ## Reglas visuales
 
 `DESIGN.md` define el diseño y `src/tokens.css` sus valores. Reutilizar estilos y componentes existentes. No inventar otra identidad, instalar un framework visual ni rediseñar la portada durante un feature. Añadir los nuevos patrones compartidos a DESIGN.md y mantener teclado, foco, estados y respuesta móvil.

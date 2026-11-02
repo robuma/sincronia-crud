@@ -20,11 +20,11 @@ Demostrar un CRUD sencillo de clientes y un proceso de desarrollo colaborativo c
 
 ## Capabilities and Constraints
 
-El cliente tiene identificador, nombre, correo y teléfono. Roberto desarrolla crear (SC-2), José listar (SC-3), Sebastián editar (SC-4) y Darío eliminar (SC-5). Esta base solo implementa la portada y las integraciones; las operaciones pertenecen a las historias del equipo. La demo será pública, sin login y exclusivamente con datos ficticios, según decisión del equipo. Hay una BD nueva de desarrollo y una de producción. No modificar proyectos existentes de Vercel o Supabase.
+El cliente tiene identificador, nombre, correo y teléfono. Roberto desarrolla crear (SC-2), José listar (SC-3), Sebastián editar (SC-4) y Darío eliminar (SC-5). Crear, consultar y eliminar están integrados; editar sigue pendiente de SC-4. SC-9, asignada a Roberto, rediseña la portada y reúne las operaciones existentes en un directorio con búsqueda por nombre, correo o teléfono desde tres caracteres. La demo es pública, sin login y exclusivamente con datos ficticios, según decisión del equipo. Hay una BD de desarrollo y una de producción. No modificar otros proyectos de Vercel o Supabase.
 
 ## Brand Commitments
 
-Nombre: Sincronía. Idioma: español. Se solicitó una portada moderna y sencilla; la prioridad es habilitar el trabajo del equipo.
+Nombre: Sincronía. Idioma: español, con voseo consistente. La identidad conserva la paleta verde y Manrope autoalojada. Para SC-9 el usuario aprobó una portada sencilla, centrada en gestión de clientes, y un sistema de estilo SaaS con tipografía ligera y más espacio. Ingresar conduce desde la portada al directorio; Nuevo cliente aparece como opción hija de Clientes. Las maquetas aprobadas y su dirección se describen en docs/evidencias/SC-9/diseno.md.
 
 ## Operating Context
 
@@ -32,7 +32,7 @@ Repositorio público robuma/sincronia-crud. Historias SC-2 a SC-5 en codefive.at
 
 ## Evidence on Hand
 
-Existen cuatro historias asignadas. Todavía no hay clientes reales, estadísticas de uso ni operaciones CRUD implementadas. No inventar métricas, testimonios o integraciones comprobadas.
+Existen cuatro historias CRUD asignadas y SC-9 para rediseño y búsqueda. Crear, consultar y eliminar tienen implementación; editar se presenta como próximo. La portada incluye tres registros ilustrativos rotulados como ficticios, separados de los datos de Supabase. El recuento del directorio proviene de sus registros. No hay evidencia de clientes reales, estadísticas de adopción ni testimonios; no inventarlos.
 
 ## Product Principles
 
