@@ -6,6 +6,7 @@ import { paginateClientes } from './paginarClientes'
 import { buscarClientes, cargarTodosLosClientes } from './buscarClientes'
 import { AccionesCliente } from './AccionesCliente'
 import { ConfirmarEliminarCliente } from '../eliminar/ConfirmarEliminarCliente'
+import { EditarCliente } from '../editar/EditarCliente' // 1. Importar EditarCliente
 
 const PAGE_SIZE = 10
 
@@ -17,6 +18,7 @@ export function ListarClientes() {
   const [page, setPage] = useState(1)
   const [refreshCount, setRefreshCount] = useState(0)
   const [pendiente, setPendiente] = useState<Cliente | null>(null)
+  const [clienteAEditar, setClienteAEditar] = useState<Cliente | null>(null) // 2. Estado para el cliente a editar
   const [notice, setNotice] = useState('')
   const search = useRef<HTMLInputElement>(null)
 
@@ -56,6 +58,19 @@ export function ListarClientes() {
     requestAnimationFrame(() => document.getElementById(`abrir-acciones-${id}`)?.focus())
   }
 
+  // 3. Si se seleccionó un cliente para editar, renderizamos el formulario de edición
+  if (clienteAEditar) {
+    return (
+      <EditarCliente
+        cliente={clienteAEditar}
+        onVerClientes={() => {
+          setClienteAEditar(null)
+          setRefreshCount(n => n + 1) // Recargar la lista por si hubo cambios
+        }}
+      />
+    )
+  }
+
   return <section className="directory" aria-label="Directorio de clientes">
     <div className="directory-toolbar">
       <div className="directory-count">
@@ -77,20 +92,26 @@ export function ListarClientes() {
         : !filtrados.length ? <div className="empty-state"><Icon name={buscando ? 'search' : 'clientes'} /><h2>{buscando ? 'No se encontraron clientes' : 'Tu directorio empieza acá'}</h2><p>{buscando ? 'Probá con otro nombre, correo o teléfono.' : 'Agregá tu primer cliente para tener sus datos a mano. Usá únicamente datos ficticios.'}</p>{buscando ? <button className="button button--secondary" type="button" onClick={() => { setQuery(''); setPage(1); search.current?.focus() }}>Limpiar búsqueda</button> : <a className="button button--primary" href="#clientes/nuevo"><Icon name="plus" />Nuevo cliente</a>}</div>
         : <>
           <table className="data-table clients-table">
-            <caption className="sr-only">Directorio de clientes. La edición estará disponible próximamente.</caption>
+            <caption className="sr-only">Directorio de clientes.</caption>
             <thead><tr><th scope="col">Nombre</th><th scope="col">Correo electrónico</th><th scope="col">Teléfono</th><th scope="col">Acciones</th></tr></thead>
             <tbody>{pagination.items.map(cliente => <tr key={cliente.id}>
               <td data-label="Nombre" className="client-name">{cliente.nombre}</td>
               <td data-label="Correo electrónico">{cliente.correo}</td>
               <td data-label="Teléfono">{cliente.telefono}</td>
-              <td data-label="Acciones"><AccionesCliente cliente={cliente} onEliminar={() => setPendiente(cliente)} /></td>
+              <td data-label="Acciones">
+                {/* 4. Pasar onEditar a AccionesCliente */}
+                <AccionesCliente 
+                  cliente={cliente} 
+                  onEditar={(item) => setClienteAEditar(item)}
+                  onEliminar={() => setPendiente(cliente)} 
+                />
+              </td>
             </tr>)}</tbody>
           </table>
           <nav className="pagination" aria-label="Paginación de clientes">
             <p>Mostrando {desde}–{Math.min(desde + PAGE_SIZE - 1, filtrados.length)} de {filtrados.length} {filtrados.length === 1 ? 'cliente' : 'clientes'}</p>
             <div className="pagination-controls"><button className="button button--secondary" type="button" onClick={() => { setPage(pagination.page - 1); search.current?.focus() }} disabled={pagination.page === 1}><Icon name="back" />Anterior</button><span className="page-number" aria-label={`Página ${pagination.page} de ${pagination.totalPages}`}>{pagination.page}</span><button className="button button--secondary" type="button" onClick={() => { setPage(pagination.page + 1); search.current?.focus() }} disabled={pagination.page >= pagination.totalPages}>Siguiente<Icon name="back" className="icon--forward" /></button></div>
           </nav>
-          <p className="directory-footnote">La edición de clientes estará disponible próximamente.</p>
         </>}
     </div>
     {pendiente && <ConfirmarEliminarCliente cliente={pendiente} onCerrar={cerrar} onEliminado={cliente => {
