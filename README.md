@@ -9,11 +9,11 @@ Sistema académico de gestión de clientes para el curso PF-3872 de la Universid
 
 El ambiente de pruebas muestra los cambios integrados en `main`. Producción muestra la versión publicada desde `production`.
 
-**La aplicación es una demostración pública sin inicio de sesión. Utilizá únicamente datos ficticios.**
+**La aplicación es una demostración pública sin inicio de sesión. Utilizar únicamente datos ficticios.**
 
 ## Ejecutar el proyecto
 
-Necesitás Git y Node.js 24. En una terminal, ejecutá:
+Se requiere Git y Node.js 24. Ejecutar los siguientes comandos en una terminal:
 
 ```bash
 git clone https://github.com/robuma/sincronia-crud.git
@@ -23,7 +23,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Abrí en el navegador la dirección que indique la terminal. El archivo `.env.example` contiene la configuración publicable de la base de datos de desarrollo. En Windows, podés copiarlo y renombrarlo manualmente como `.env.local` si no utilizás una terminal compatible con `cp`.
+Abrir en el navegador la dirección que indique la terminal. El archivo `.env.example` contiene la configuración publicable de la base de datos de desarrollo. En Windows, se puede copiar y renombrar manualmente como `.env.local` si la terminal no admite `cp`.
 
 Para ejecutar las comprobaciones del proyecto:
 
