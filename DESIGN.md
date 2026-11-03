@@ -1,4 +1,4 @@
----
+----
 name: Sincronía
 description: Un directorio de clientes claro, tranquilo y conectado.
 colors:
