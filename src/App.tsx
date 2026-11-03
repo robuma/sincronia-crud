@@ -48,7 +48,7 @@ function App() {
       <div className="workspace-main">
         <header className="workspace-header"><nav aria-label="Ruta de navegación"><a href="#clientes">Gestión</a><span aria-hidden="true">/</span>{vista === 'crear' ? <><a href="#clientes">Clientes</a><span aria-hidden="true">/</span><span>Nuevo</span></> : <span>Clientes</span>}</nav><p>Demo pública · Datos ficticios</p></header>
         <main id="contenido" tabIndex={-1} className="workspace-content">
-          <div className="workspace-heading"><div><h1 ref={titulo} tabIndex={-1}>{vista === 'crear' ? 'Nuevo cliente' : 'Clientes'}</h1><p>{vista === 'crear' ? 'Agregá los datos de contacto a tu directorio.' : 'Consultá y administrá los datos de contacto.'}</p></div>{vista === 'clientes' ? <a className="button button--primary" href="#clientes/nuevo"><Icon name="plus" />Nuevo cliente</a> : <a className="button button--secondary" href="#clientes"><Icon name="back" />Volver a clientes</a>}</div>
+          <div className="workspace-heading"><div><h1 ref={titulo} tabIndex={-1}>{vista === 'crear' ? 'Nuevo cliente' : 'Clientes'}</h1><p>{vista === 'crear' ? 'Agregar los datos de contacto a tu directorio.' : 'Consultar y administrar los datos de contacto.'}</p></div>{vista === 'clientes' ? <a className="button button--primary" href="#clientes/nuevo"><Icon name="plus" />Nuevo cliente</a> : <a className="button button--secondary" href="#clientes"><Icon name="back" />Volver a clientes</a>}</div>
           {vista === 'crear' ? <CrearCliente onVerClientes={() => { window.location.hash = 'clientes' }} /> : <ListarClientes />}
         </main>
         <footer className="workspace-footer">Demostración con datos ficticios</footer>
