@@ -1,0 +1,20 @@
+:root {
+  --font-sans: 'Manrope Variable', 'Manrope', sans-serif;
+  --color-surface: #f8faf8;
+  --color-surface-raised: #ffffff;
+  --color-ink: #193b38;
+  --color-muted: #536c65;
+  --color-accent: #286b52;
+  --color-accent-soft: #e0edc9;
+  --color-accent-line: #adc7b5;
+  --color-line: #d6dfd8;
+  --color-danger: #b32d31;
+  --radius-control: 8px;
+  --radius-panel: 14px;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+}

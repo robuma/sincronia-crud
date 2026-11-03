@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T04:16:43.051662Z",
+  "title": "Design System: Sincronía",
+  "extensions": {
+    "colorMeta": {
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superficie tranquila",
+        "tonalRamp": [
+          "oklch(15.00% 0.00337 145.55)",
+          "oklch(26.43% 0.00337 145.55)",
+          "oklch(37.86% 0.00337 145.55)",
+          "oklch(49.29% 0.00337 145.55)",
+          "oklch(60.71% 0.00337 145.55)",
+          "oklch(72.14% 0.00337 145.55)",
+          "oklch(83.57% 0.00337 145.55)",
+          "oklch(95.00% 0.00337 145.55)"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Blanco de trabajo",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta verde petróleo",
+        "tonalRamp": [
+          "oklch(15.00% 0.04007 187.80)",
+          "oklch(26.43% 0.04007 187.80)",
+          "oklch(37.86% 0.04007 187.80)",
+          "oklch(49.29% 0.04007 187.80)",
+          "oklch(60.71% 0.04007 187.80)",
+          "oklch(72.14% 0.04007 187.80)",
+          "oklch(83.57% 0.04007 187.80)",
+          "oklch(95.00% 0.04007 187.80)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Verde grisáceo",
+        "tonalRamp": [
+          "oklch(15.00% 0.03157 175.99)",
+          "oklch(26.43% 0.03157 175.99)",
+          "oklch(37.86% 0.03157 175.99)",
+          "oklch(49.29% 0.03157 175.99)",
+          "oklch(60.71% 0.03157 175.99)",
+          "oklch(72.14% 0.03157 175.99)",
+          "oklch(83.57% 0.03157 175.99)",
+          "oklch(95.00% 0.03157 175.99)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Verde de acción",
+        "tonalRamp": [
+          "oklch(15.00% 0.07949 165.44)",
+          "oklch(26.43% 0.07949 165.44)",
+          "oklch(37.86% 0.07949 165.44)",
+          "oklch(49.29% 0.07949 165.44)",
+          "oklch(60.71% 0.07949 165.44)",
+          "oklch(72.14% 0.07949 165.44)",
+          "oklch(83.57% 0.07949 165.44)",
+          "oklch(95.00% 0.07949 165.44)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Verde suave",
+        "tonalRamp": [
+          "oklch(15.00% 0.04956 123.53)",
+          "oklch(26.43% 0.04956 123.53)",
+          "oklch(37.86% 0.04956 123.53)",
+          "oklch(49.29% 0.04956 123.53)",
+          "oklch(60.71% 0.04956 123.53)",
+          "oklch(72.14% 0.04956 123.53)",
+          "oklch(83.57% 0.04956 123.53)",
+          "oklch(95.00% 0.04956 123.53)"
+        ]
+      },
+      "accent-line": {
+        "role": "primary",
+        "displayName": "Verde de borde",
+        "tonalRamp": [
+          "oklch(15.00% 0.03770 155.25)",
+          "oklch(26.43% 0.03770 155.25)",
+          "oklch(37.86% 0.03770 155.25)",
+          "oklch(49.29% 0.03770 155.25)",
+          "oklch(60.71% 0.03770 155.25)",
+          "oklch(72.14% 0.03770 155.25)",
+          "oklch(83.57% 0.03770 155.25)",
+          "oklch(95.00% 0.03770 155.25)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Línea suave",
+        "tonalRamp": [
+          "oklch(15.00% 0.01351 152.58)",
+          "oklch(26.43% 0.01351 152.58)",
+          "oklch(37.86% 0.01351 152.58)",
+          "oklch(49.29% 0.01351 152.58)",
+          "oklch(60.71% 0.01351 152.58)",
+          "oklch(72.14% 0.01351 152.58)",
+          "oklch(83.57% 0.01351 152.58)",
+          "oklch(95.00% 0.01351 152.58)"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Rojo de eliminación",
+        "tonalRamp": [
+          "oklch(15.00% 0.17046 24.24)",
+          "oklch(26.43% 0.17046 24.24)",
+          "oklch(37.86% 0.17046 24.24)",
+          "oklch(49.29% 0.17046 24.24)",
+          "oklch(60.71% 0.17046 24.24)",
+          "oklch(72.14% 0.17046 24.24)",
+          "oklch(83.57% 0.17046 24.24)",
+          "oklch(95.00% 0.17046 24.24)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular de portada; variantes responsivas en DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de pantalla operativa."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Vista de ejemplo, diálogo y estados vacíos."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Título del panel de formulario."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prosa y campos de entrada."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Datos del directorio; cifras tabulares."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas del formulario."
+      },
+      "helper": {
+        "displayName": "Helper",
+        "purpose": "Ayudas, avisos y pies."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Texto del botón base."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "background-color 160ms ease, border-color 160ms ease",
+        "purpose": "Respuesta de botones principales y secundarios."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }",
+        "purpose": "Respeta la preferencia de reducir movimiento."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "medium",
+        "value": "1200px"
+      },
+      {
+        "name": "navigation-collapse",
+        "value": "960px"
+      },
+      {
+        "name": "mobile-rows",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Variante compartida con foco visible y estado deshabilitado.",
+      "html": "<button type=\"button\" class=\"ds-button ds-button-primary\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>Nuevo cliente</button>",
+      "css": ".ds-button { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:11px 22px; border:1px solid transparent; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:15px; font-weight:500; line-height:1.5; white-space:nowrap; cursor:pointer; transition:background-color 160ms ease, border-color 160ms ease; } .ds-button:disabled { opacity:.55; cursor:not-allowed; } .ds-button-primary { background:var(--color-accent); color:var(--color-surface-raised); } .ds-button-primary:hover { background:var(--color-ink); } .ds-button-secondary { background:transparent; color:var(--color-ink); border-color:var(--color-line); } .ds-button-secondary:hover:not(:disabled) { background:var(--color-surface-raised); border-color:var(--color-accent-line); } .ds-button-danger { background:var(--color-danger); color:var(--color-surface-raised); } @media(prefers-reduced-motion:reduce) { .ds-button { transition:none; } } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } "
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Variante compartida con foco visible y estado deshabilitado.",
+      "html": "<button type=\"button\" class=\"ds-button ds-button-secondary\">Cancelar</button>",
+      "css": ".ds-button { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:11px 22px; border:1px solid transparent; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:15px; font-weight:500; line-height:1.5; white-space:nowrap; cursor:pointer; transition:background-color 160ms ease, border-color 160ms ease; } .ds-button:disabled { opacity:.55; cursor:not-allowed; } .ds-button-primary { background:var(--color-accent); color:var(--color-surface-raised); } .ds-button-primary:hover { background:var(--color-ink); } .ds-button-secondary { background:transparent; color:var(--color-ink); border-color:var(--color-line); } .ds-button-secondary:hover:not(:disabled) { background:var(--color-surface-raised); border-color:var(--color-accent-line); } .ds-button-danger { background:var(--color-danger); color:var(--color-surface-raised); } @media(prefers-reduced-motion:reduce) { .ds-button { transition:none; } } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } "
+    },
+    {
+      "name": "Botón destructivo",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Variante compartida con foco visible y estado deshabilitado.",
+      "html": "<button type=\"button\" class=\"ds-button ds-button-danger\">Sí, eliminar</button>",
+      "css": ".ds-button { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:11px 22px; border:1px solid transparent; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:15px; font-weight:500; line-height:1.5; white-space:nowrap; cursor:pointer; transition:background-color 160ms ease, border-color 160ms ease; } .ds-button:disabled { opacity:.55; cursor:not-allowed; } .ds-button-primary { background:var(--color-accent); color:var(--color-surface-raised); } .ds-button-primary:hover { background:var(--color-ink); } .ds-button-secondary { background:transparent; color:var(--color-ink); border-color:var(--color-line); } .ds-button-secondary:hover:not(:disabled) { background:var(--color-surface-raised); border-color:var(--color-accent-line); } .ds-button-danger { background:var(--color-danger); color:var(--color-surface-raised); } @media(prefers-reduced-motion:reduce) { .ds-button { transition:none; } } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } "
+    },
+    {
+      "name": "Campo de formulario",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Etiqueta visible, texto de cuerpo y error asociado al campo.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-nombre\">Nombre</label><input id=\"ds-nombre\" name=\"nombre\" placeholder=\"Ej. Cliente de prueba\" required aria-describedby=\"ds-nombre-error\" aria-invalid=\"true\"><span id=\"ds-nombre-error\" class=\"ds-field-error\">Escribí un nombre.</span></div>",
+      "css": ".ds-field { display:grid; gap:8px; margin-block:24px; font-family:var(--font-sans); color:var(--color-ink); } .ds-field label { font-size:14px; font-weight:500; } .ds-field input { min-width:0; min-height:48px; padding:12px 16px; border:1px solid var(--color-line); border-radius:var(--radius-control); background:var(--color-surface-raised); color:var(--color-ink); font-family:var(--font-sans); font-size:16px; } .ds-field input::placeholder { color:var(--color-muted); opacity:1; } .ds-field input[aria-invalid=\"true\"] { border-color:var(--color-danger); } .ds-field-error { color:var(--color-danger); font-size:14px; line-height:1.6; } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } "
+    },
+    {
+      "name": "Búsqueda del directorio",
+      "kind": "input",
+      "refersTo": "search",
+      "description": "Muestra la etiqueta, el icono y el umbral de tres caracteres.",
+      "html": "<div class=\"ds-search\"><label for=\"ds-buscar\">Buscar clientes</label><div class=\"ds-search-control\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 5 5\"/></svg><input id=\"ds-buscar\" type=\"search\" placeholder=\"Nombre, correo o teléfono\" aria-describedby=\"ds-buscar-ayuda\"></div><p id=\"ds-buscar-ayuda\">Escribí al menos 3 caracteres</p></div>",
+      "css": ".ds-search { font-family:var(--font-sans); color:var(--color-muted); } .ds-search label { display:block; font-size:14px; margin-bottom:6px; } .ds-search-control { position:relative; } .ds-search-control > .ds-icon { position:absolute; top:13px; left:16px; pointer-events:none; } .ds-search input { box-sizing:border-box; width:100%; min-width:0; padding:11px 16px 11px 50px; height:48px; border:1px solid var(--color-line); border-radius:var(--radius-control); background:var(--color-surface-raised); color:var(--color-ink); font-family:var(--font-sans); font-size:16px; } .ds-search input::placeholder { color:var(--color-muted); opacity:1; } .ds-search p { font-size:13px; line-height:1.6; margin:4px 0 0; } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } "
+    },
+    {
+      "name": "Navegación de clientes",
+      "kind": "nav",
+      "refersTo": "nav-parent",
+      "description": "Composición del grupo expandido y su opción hija; App controla la expansión.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegación del sistema\"><div class=\"ds-nav-parent\"><a href=\"#clientes\" aria-current=\"page\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"7\" r=\"4\"/><path d=\"M4 21v-2a8 8 0 0 1 16 0v2\"/></svg>Clientes</a><button type=\"button\" aria-label=\"Contraer opciones de clientes\" aria-expanded=\"true\" aria-controls=\"ds-clientes-submenu\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m7 10 5 5 5-5\"/></svg></button></div><div id=\"ds-clientes-submenu\" class=\"ds-nav-child\"><a href=\"#clientes/nuevo\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>Nuevo cliente</a></div></nav>",
+      "css": ".ds-nav { font-family:var(--font-sans); color:var(--color-ink); } .ds-nav a { color:inherit; text-decoration:none; } .ds-nav-parent { display:flex; align-items:center; background:var(--color-accent-soft); border-radius:var(--radius-control); } .ds-nav-parent > a { display:flex; align-items:center; gap:20px; flex:1; padding:14px 16px; font-size:16px; font-weight:450; } .ds-nav-parent button { display:inline-flex; justify-content:center; align-items:center; width:44px; height:44px; padding:10px; border:0; border-radius:var(--radius-control); background:transparent; color:var(--color-ink); cursor:pointer; } .ds-nav-child { position:relative; margin:10px 0 0 30px; padding-left:12px; } .ds-nav-child::before { content:\"\"; position:absolute; left:0; top:-10px; height:38px; width:14px; border-left:1px solid var(--color-line); border-bottom:1px solid var(--color-line); border-radius:0 0 0 8px; } .ds-nav-child a { display:flex; align-items:center; gap:14px; padding:10px 8px; font-size:14px; border-radius:6px; } .ds-nav-child a:hover,.ds-nav-child a[aria-current] { background:var(--color-surface-raised); color:var(--color-accent); } .ds-nav-child .ds-icon { width:18px; height:18px; } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } "
+    },
+    {
+      "name": "Panel de datos",
+      "kind": "card",
+      "refersTo": "data-panel",
+      "description": "Superficie del formulario existente, sin sombra.",
+      "html": "<section class=\"ds-panel\"><h2>Datos del cliente</h2><p>Completá los tres campos para agregar un cliente.</p><p>Usá únicamente datos ficticios.</p></section>",
+      "css": ".ds-panel { max-width:42rem; border:1px solid var(--color-line); border-radius:var(--radius-panel); padding:32px; background:var(--color-surface-raised); color:var(--color-ink); font-family:var(--font-sans); } .ds-panel h2 { margin:0; font-size:24px; font-weight:400; line-height:1.2; letter-spacing:-.03em; } .ds-panel p { margin:var(--space-2) 0; color:var(--color-muted); font-size:16px; line-height:1.7; } @media(max-width:680px) { .ds-panel { padding:24px; } }"
+    },
+    {
+      "name": "Menú de acciones abierto",
+      "kind": "custom",
+      "refersTo": "row-popover",
+      "description": "Anatomía del popover; AccionesCliente controla su posición y foco.",
+      "html": "<div class=\"ds-popover\"><button type=\"button\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v5M14 11v5\"/></svg>Eliminar cliente</button></div>",
+      "css": ".ds-popover { padding:6px; background:var(--color-surface-raised); border:1px solid var(--color-line); border-radius:var(--radius-control); } .ds-popover button { display:flex; align-items:center; gap:12px; width:100%; padding:10px 12px; border:0; background:transparent; color:var(--color-danger); font-family:var(--font-sans); font-size:14px; border-radius:4px; cursor:pointer; } .ds-popover button:hover { background:var(--color-surface); } .ds-icon { width:22px; height:22px; flex:none; vertical-align:middle; } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } "
+    },
+    {
+      "name": "Confirmación de eliminación",
+      "kind": "custom",
+      "refersTo": "confirm-dialog",
+      "description": "Vista abierta del diálogo; la aplicación usa showModal y enfoca Cancelar.",
+      "html": "<dialog open class=\"ds-dialog\" aria-labelledby=\"ds-eliminar-title\" aria-describedby=\"ds-eliminar-desc\"><h2 id=\"ds-eliminar-title\">¿Eliminar este cliente?</h2><p id=\"ds-eliminar-desc\">Se eliminará a <strong>Cliente de prueba</strong> (cliente@example.com). Esta acción no se puede deshacer.</p><div class=\"ds-dialog-actions\"><button type=\"button\" class=\"ds-button ds-button-secondary\">Cancelar</button><button type=\"button\" class=\"ds-button ds-button-danger\">Sí, eliminar</button></div></dialog>",
+      "css": ".ds-dialog { width:min(520px,calc(100% - 32px)); margin:auto; padding:32px; border:1px solid var(--color-line); border-radius:var(--radius-panel); background:var(--color-surface-raised); color:var(--color-ink); font-family:var(--font-sans); } .ds-dialog::backdrop { background:rgb(25 59 56 / 48%); } .ds-dialog h2 { margin:0; font-size:28px; font-weight:400; line-height:1.2; letter-spacing:-.03em; } .ds-dialog p { margin:20px 0 28px; overflow-wrap:anywhere; color:var(--color-muted); font-size:16px; line-height:1.6; } .ds-dialog-actions { display:flex; justify-content:flex-end; gap:12px; } @media(max-width:680px) { .ds-dialog { padding:24px; } .ds-dialog-actions { flex-direction:column; } } .ds-button { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:11px 22px; border:1px solid transparent; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:15px; font-weight:500; line-height:1.5; white-space:nowrap; cursor:pointer; transition:background-color 160ms ease, border-color 160ms ease; } .ds-button:disabled { opacity:.55; cursor:not-allowed; } .ds-button-primary { background:var(--color-accent); color:var(--color-surface-raised); } .ds-button-primary:hover { background:var(--color-ink); } .ds-button-secondary { background:transparent; color:var(--color-ink); border-color:var(--color-line); } .ds-button-secondary:hover:not(:disabled) { background:var(--color-surface-raised); border-color:var(--color-accent-line); } .ds-button-danger { background:var(--color-danger); color:var(--color-surface-raised); } @media(prefers-reduced-motion:reduce) { .ds-button { transition:none; } } :focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; } "
+    }
+  ],
+  "narrative": {
+    "northStar": "El directorio conectado",
+    "overview": "Sincronía presenta la gestión de clientes con una identidad tranquila: superficies casi blancas, tinta verde petróleo, un acento verde y Manrope autoalojada. El símbolo enlaza dos recorridos. Los títulos ligeros y el espacio entre grupos distinguen navegación, datos y acciones sin añadir decoración.\n\nLas pantallas operativas comparten un directorio y su estructura de navegación. La interfaz usa español con voseo y mantiene visible que se trata de una demostración pública con datos ficticios.",
+    "keyCharacteristics": [
+      "Una paleta y una familia tipográfica para portada, directorio y formularios.",
+      "Jerarquía por tamaño, espacio y superficies; títulos y datos ligeros.",
+      "Controles con bordes suaves, iconos lineales y foco visible.",
+      "Un directorio compartido que reorganiza sus filas en móvil."
+    ],
+    "rules": [
+      {
+        "name": "The Paleta compartida Rule",
+        "body": "Reutilizar las variables de src/tokens.css; un feature no introduce otra paleta ni cambia un token global para resolver un caso local.",
+        "section": "colors"
+      },
+      {
+        "name": "The Jerarquía ligera Rule",
+        "body": "Mantener un h1 por pantalla y h2/h3 por sección. Los encabezados base tienen peso (400); los nombres de funcionalidades de la portada son la excepción existente de peso (500).",
+        "section": "typography"
+      },
+      {
+        "name": "The Profundidad por superficie Rule",
+        "body": "Usar un borde o una división para agrupar información. Reservar el diálogo para una decisión que interrumpe la tarea; no añadir tarjetas decorativas ni sombras para aumentar jerarquía.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reutilizar paleta, Manrope autoalojada, Brand, Icon, directorio y navegación compartida.",
+      "Do mantener etiquetas, semántica HTML, foco de teclado y mensajes vinculados al resultado real.",
+      "Do verificar escritorio, móvil, teclado, texto largo y estados de carga, vacío, búsqueda sin resultados y error.",
+      "Do conservar voseo y la advertencia de usar datos ficticios; documentar patrones nuevos y justificar cambios de tokens en el PR."
+    ],
+    "donts": [
+      "Don't introducir otra identidad, framework visual, fuente externa, listado o navegación paralela para una historia.",
+      "Don't presentar funciones pendientes como disponibles, inventar estadísticas o confundir la muestra de portada con la base de datos.",
+      "Don't depender solo del color, placeholder o animación, ni truncar contactos por comodidad visual."
+    ]
+  }
+}
